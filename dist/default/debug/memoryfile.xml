@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/default/debug\SPI.debug.hex">
+  <executable name="dist/default/debug/MAX7219.X.debug.hex">
     <memory name="program">
       <units>bytes</units>
       <length>131072</length>
-      <used>3292</used>
-      <free>127780</free>
+      <used>3807</used>
+      <free>127265</free>
     </memory>
     <memory name="data">
       <units>bytes</units>
       <length>8448</length>
-      <used>186</used>
-      <free>8262</free>
+      <used>209</used>
+      <free>8239</free>
     </memory>
   </executable>
 </project>

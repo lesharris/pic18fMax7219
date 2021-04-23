@@ -41,12 +41,12 @@
          <string>class com.microchip.mcc.mcu8.dmaManager.submodule.DMAModules</string>
       </entry>
       <entry>
-         <string>DMA CHANNEL3</string>
-         <string>class com.microchip.mcc.mcu8.dmaManager.submodule.DMAModules</string>
-      </entry>
-      <entry>
          <string>UART1</string>
          <string>class com.microchip.mcc.mcu8.modules.uart.UART</string>
+      </entry>
+      <entry>
+         <string>DMA CHANNEL3</string>
+         <string>class com.microchip.mcc.mcu8.dmaManager.submodule.DMAModules</string>
       </entry>
       <entry>
          <string>System Module</string>
@@ -91,7 +91,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="Pin Module" registerAlias="RF0PPS"/>
-         <value>0</value>
+         <value>32</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="PMD" registerAlias="PMD7" settingAlias="CLC2MD" alias="CLC2 enabled"/>
@@ -319,7 +319,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="iocUserSet RB4"/>
-         <value>disabled</value>
+         <value>enabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="iocUserSet RB5"/>
@@ -2015,7 +2015,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="RF0PPS" settingAlias="RF0PPS"/>
-         <value>0</value>
+         <value>32</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="DMA CHANNEL2" registerAlias="DMASIRQ" settingAlias="SIRQ" alias="PWM2_RINT"/>
@@ -3859,7 +3859,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="Pin Module" registerAlias="ANSELF"/>
-         <value>247</value>
+         <value>244</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="trisUserSetRB0"/>
@@ -4539,7 +4539,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="Pin Module" registerAlias="ANSELC"/>
-         <value>7</value>
+         <value>135</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="TRISD" settingAlias="TRISD7"/>
@@ -5023,7 +5023,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="Pin Module" registerAlias="TRISF"/>
-         <value>247</value>
+         <value>246</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="DMA CHANNEL6" registerAlias="DMASIRQ" settingAlias="SIRQ" alias="NCO3"/>
@@ -7631,7 +7631,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="Pin Module" registerAlias="U1RXPPS"/>
-         <value>23</value>
+         <value>41</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="anselUserSetRB6"/>
@@ -7943,7 +7943,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="anselUserSetRF0"/>
-         <value>disabled</value>
+         <value>enabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="anselUserSetRF1"/>
@@ -9171,7 +9171,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="TRISF" settingAlias="TRISF0"/>
-         <value>input</value>
+         <value>output</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="DMA CHANNEL4" registerAlias="DMASIRQ" settingAlias="SIRQ" alias="U5TX"/>
@@ -10263,7 +10263,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="UART1" name="useStdio"/>
-         <value>enabled</value>
+         <value>disabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="System Module" registerAlias="CONFIG3" settingAlias="IVT1WAY" alias="OFF"/>
@@ -10935,7 +10935,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="U1RXPPS" settingAlias="U1RXPPS"/>
-         <value>23</value>
+         <value>41</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="SPI1" registerAlias="SPICLK" settingAlias="CLKSEL" alias="TMR2_Postscaled"/>
@@ -14591,7 +14591,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="ANSELF" settingAlias="ANSELF0"/>
-         <value>analog</value>
+         <value>digital</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="LATB" settingAlias="LATB6" alias="set"/>
@@ -14687,7 +14687,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="ANSELF" settingAlias="ANSELF1"/>
-         <value>analog</value>
+         <value>digital</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="WWDT" registerAlias="WDTCON0" settingAlias="WDTPS" alias="1:64"/>
@@ -16031,7 +16031,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="ANSELC" settingAlias="ANSELC7"/>
-         <value>digital</value>
+         <value>analog</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="DMA CHANNEL3" registerAlias="DMASIRQ" settingAlias="SIRQ" alias="PWM2_RINT"/>
@@ -17892,56 +17892,56 @@
    </tokenMap>
    <generatedFileHashHistoryMap class="java.util.HashMap">
       <entry>
-         <file>mcc_generated_files\mcc.h</file>
-         <hash>dbcb88ee335f6ae3d517b94d629416f2628eb53917a820f581b1d8c642fc4522</hash>
-      </entry>
-      <entry>
-         <file>mcc_generated_files\device_config.h</file>
-         <hash>aa1eaae1d8c99eb9381a99a203493b4e7fd3220820b569a5c516021878616d93</hash>
-      </entry>
-      <entry>
-         <file>mcc_generated_files\interrupt_manager.h</file>
+         <file>mcc_generated_files/interrupt_manager.h</file>
          <hash>84c0304e8dcbc82d623e4cf002e9b888001ef11c5154eca69c1699b9f0158b6d</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\uart1.h</file>
-         <hash>b176bcfbe5b6d0074ae55a662cbc831d5ed18a8234c3952f944e02ca7fdbc620</hash>
+         <file>mcc_generated_files/pin_manager.h</file>
+         <hash>5f1a42c879b8d0b7d8e610862717db47d2e33b0ffc63cfbc4963043297c56665</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\uart1.c</file>
-         <hash>ab6ba9ac7a66a5ac10a671d546d8cb8b1b4d1dc2f36c0bfbdc232a3f401c2a8f</hash>
+         <file>mcc_generated_files/spi1.c</file>
+         <hash>2cfbfd466cef55fd27c4b7bce2fd8b351564d5ebeb791d7fd3977e772c8535aa</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files/uart1.h</file>
+         <hash>43621bc46acf4b9450b84dae487f2b2e8c431d61996f0ea88c95a5bba4bce4ab</hash>
       </entry>
       <entry>
          <file>main.c</file>
          <hash>c82b45382599c9edc4829bc6c5c337ad37bf2bfcb65d6ceddbee30b738e0ac4c</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\device_config.c</file>
-         <hash>9e898251df45388aeae0852a9251057dad46e89e1f542e90663bdab882f89652</hash>
-      </entry>
-      <entry>
-         <file>mcc_generated_files\pin_manager.h</file>
-         <hash>2b964e16f535d6adaf83e64388445309fc1ee1af8d4090b5a1a67e906961a065</hash>
-      </entry>
-      <entry>
-         <file>mcc_generated_files\spi1.h</file>
+         <file>mcc_generated_files/spi1.h</file>
          <hash>d96c3c0013647cb7b566db1677f4f1ba2b84438722857d8da9c98d831e54de97</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\pin_manager.c</file>
-         <hash>827e07cb31960cbb1572e13c350a4e629b6bd1e16dd2ae05c3f1a746ed977c8d</hash>
+         <file>mcc_generated_files/device_config.h</file>
+         <hash>aa1eaae1d8c99eb9381a99a203493b4e7fd3220820b569a5c516021878616d93</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\spi1.c</file>
-         <hash>2cfbfd466cef55fd27c4b7bce2fd8b351564d5ebeb791d7fd3977e772c8535aa</hash>
+         <file>mcc_generated_files/mcc.h</file>
+         <hash>dbcb88ee335f6ae3d517b94d629416f2628eb53917a820f581b1d8c642fc4522</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\mcc.c</file>
+         <file>mcc_generated_files/device_config.c</file>
+         <hash>9e898251df45388aeae0852a9251057dad46e89e1f542e90663bdab882f89652</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files/interrupt_manager.c</file>
+         <hash>dff2ed4f7fab4732516c33237b74403013e8433b11924a1815366ccba2af0750</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files/mcc.c</file>
          <hash>4db9db4667cb6bd8314cddbd4858901ab09e0cb968ace68b110025f3c9db4d9b</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\interrupt_manager.c</file>
-         <hash>dff2ed4f7fab4732516c33237b74403013e8433b11924a1815366ccba2af0750</hash>
+         <file>mcc_generated_files/uart1.c</file>
+         <hash>5f33049f07645b9b8b34122aa6ccfb5cf90a1b0cba711fea509ab55ebc1a2dd4</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files/pin_manager.c</file>
+         <hash>f6d0bc6d4be17a0b06370693bc7b5c4a48e2efae68e125946b63af51641fe0c8</hash>
       </entry>
    </generatedFileHashHistoryMap>
    <mc3libFileHashHistoryMap class="java.util.HashMap"/>

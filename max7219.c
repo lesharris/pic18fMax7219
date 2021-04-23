@@ -103,6 +103,36 @@ void MAX7219_Clear() {
   memset(framebuffer, 0, 64);
 }
 
+void MAX7219_DrawSprite(uint8_t *sprite, int16_t x, int16_t y, uint8_t width, uint8_t height)
+{
+  uint8_t mask = 0b10000000;
+  
+  for( int iy = 0; iy < height; iy++ )
+  {
+    for( int ix = 0; ix < width; ix++ )
+    {
+      MAX7219_SetPixel(x + ix, y + iy, (bool)(sprite[iy] & mask ));
+      mask = mask >> 1;
+    }
+    mask = 0b10000000;
+  }
+}
+
+void MAX7219_DrawString(char* text, uint16_t len, int16_t x, int16_t y) {
+    for( int idx = 0; idx < len; idx ++ )
+  {
+    int c = text[idx] - 32;
+
+    // stop if char is outside visible area
+    if( x + idx * 8  > 63 )
+      return;
+
+    // only draw if char is visible
+    if( 8 + x + idx * 8 > 0 )
+      MAX7219_DrawSprite( font[c], x + idx * 8, y, 8, 8 );
+  }
+}
+
 uint8_t *getBufferPtr(int16_t x, int16_t y) {
   if (y < 0 || y > 7)
     return NULL;
@@ -110,7 +140,7 @@ uint8_t *getBufferPtr(int16_t x, int16_t y) {
   if (x < 0 || x > 7)
     return NULL;
 
-  uint16_t byte = x >> 3;
+  uint16_t byte = (uint16_t)x >> 3;
 
   return framebuffer + y + byte;
 }
