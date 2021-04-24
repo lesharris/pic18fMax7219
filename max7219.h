@@ -86,7 +86,7 @@ void MAX7219_Display(void);
 void MAX7219_DisplayRow(uint8_t row);
 void MAX7219_Clear(void);
 
-void MAX7219_DrawSprite(uint8_t *sprite, int16_t x, int16_t y, uint8_t width, uint8_t height);
-void MAX7219_DrawString(char* text, uint16_t len, int16_t x, int16_t y);
+void MAX7219_DrawSprite(const uint8_t *sprite, int16_t x, int16_t y, uint8_t width, uint8_t height);
+void MAX7219_DrawString(const char *text, uint16_t len, int16_t x, int16_t y);
 
 #endif // MAX7219_H

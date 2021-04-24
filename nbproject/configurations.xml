@@ -104,7 +104,7 @@
         <property key="opt-xc8-compiler-strict_ansi" value="false"/>
         <property key="optimization-assembler" value="true"/>
         <property key="optimization-assembler-files" value="true"/>
-        <property key="optimization-debug" value="false"/>
+        <property key="optimization-debug" value="true"/>
         <property key="optimization-invariant-enable" value="false"/>
         <property key="optimization-invariant-value" value="16"/>
         <property key="optimization-level" value="-O0"/>
@@ -117,7 +117,7 @@
         <property key="use-cci" value="false"/>
         <property key="use-iar" value="false"/>
         <property key="verbose" value="false"/>
-        <property key="warning-level" value="-3"/>
+        <property key="warning-level" value="-8"/>
         <property key="what-to-do" value="ignore"/>
       </HI-TECH-COMP>
       <HI-TECH-LINK>
@@ -165,6 +165,7 @@
         <property key="opt-xc8-linker-serial" value=""/>
         <property key="program-the-device-with-default-config-words" value="true"/>
         <property key="remove-unused-sections" value="true"/>
+        <appendMe value="--msgdisable=520"/>
       </HI-TECH-LINK>
       <XC8-CO>
         <property key="coverage-enable" value=""/>

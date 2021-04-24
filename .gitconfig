@@ -1,0 +1,5 @@
+dist/
+**/**.dump
+**.dump
+.DS_Store
+

@@ -1,10 +1,11 @@
-#include "max7219.h"
 #include <xc.h>
 #include <string.h>
 #include <stdio.h>
-#include "mcc_generated_files/mcc.h"
 
-const uint8_t sprites[14][8] = {
+#include "mcc_generated_files/mcc.h"
+#include "max7219.h"
+
+const uint8_t sprites[17][8] = {
   {0x3c, 0x7e, 0xdf, 0xff, 0xf0, 0xff, 0x7e, 0x3c}, // Pac close
   {0x3c, 0x7e, 0xdc, 0xf8, 0xf8, 0xfc, 0x7e, 0x3c}, // Pac Open
   {0x18, 0x7e, 0xff, 0xbd, 0xff, 0xff, 0xff, 0xa5}, // Ghost 1
@@ -18,13 +19,19 @@ const uint8_t sprites[14][8] = {
   {0x00, 0x66, 0x99, 0x81, 0x81, 0x42, 0x24, 0x18}, // heart 3
   {0x00, 0x66, 0xff, 0xff, 0xff, 0x7e, 0x3c, 0x18}, // heart 4
   {0x3c, 0x18, 0x18, 0x18, 0x18, 0x18, 0x3c, 0x00}, // I
-  {0xc6, 0xc6, 0xc6, 0xc6, 0xc6, 0xc6, 0x7c, 0x00}, // U
+  {0xc6, 0xc6, 0xc6, 0xc6, 0xc6, 0xc6, 0x7c, 0x00}, // U,
+  {0x66,0x66,0x66,0xff,0x81,0xa5,0x99,0x7e}, // Bunny 1
+  {0x66,0xe7,0x66,0xff,0x81,0xa5,0x99,0x7e}, // Bunny 2
+  {0x66,0x66,0xff,0x81,0xa5,0x81,0x99,0x7e}  // Bunny 3
 };
 
-#define ANIM_LENGTH 27
+//#define ANIM_LENGTH 27
+
+#define ANIM_LENGTH 4
 
 void main(void) {
-  uint8_t sequence[ANIM_LENGTH] = {0, 1, 0, 1, 2, 3, 4, 5, 6, 7, 7, 12, 12, 12, 12, 8, 9, 10, 11, 11, 10, 9, 8, 13, 13, 13, 13};
+  uint8_t sequence[ANIM_LENGTH] = { 14, 15, 16, 15 };
+  //uint8_t sequence[ANIM_LENGTH] = {0, 1, 0, 1, 2, 3, 4, 5, 6, 7, 7, 12, 12, 12, 12, 8, 9, 10, 11, 11, 10, 9, 8, 13, 13, 13, 13};
   uint8_t sequenceLength = ANIM_LENGTH;
   uint8_t sequenceCount = 0;
   uint8_t brightness = 4;
@@ -38,12 +45,21 @@ void main(void) {
 
   INTERRUPT_GlobalInterruptEnable();
   
+  printf("MAX7219 Driver for PIC18F\r\n");
+  
+  int8_t x = 0;
   while (1) {
     MAX7219_Clear();
 
-    MAX7219_DrawSprite(sprites[sequence[sequenceCount++ % sequenceLength]], 0, 0, 8, 8);
+    MAX7219_DrawSprite(sprites[sequence[sequenceCount++ % sequenceLength]], x, 0, 8, 8);
+    
+    printf("Sprite #%x\r\n", sprites[sequence[sequenceCount % sequenceLength]]);
 
     MAX7219_Display();
+    
+    if(x++ == 8) {
+      x = -7;
+    }
 
     __delay_ms(200);
     

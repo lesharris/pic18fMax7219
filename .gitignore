@@ -1,1 +1,5 @@
 dist/
+build/
+**/*.i
+**/*.dump
+.DS_Store
